@@ -1,27 +1,40 @@
 import { useState, useEffect } from "react";
-import {getClothes} from '../helpers/getClothes';
 
-export const useFetchClothes= (category) =>{
-    const [state, setstate] = useState({
-        data:[],
-        loading:true
-    })
+export const useFetchClothes= () =>{
     
-    useEffect(()=>{
-    getClothes(category)
-        .then(imgs=>{
-            setTimeout(()=>{
+    const [state, setstate] = useState({
+        items:[],
+        error: null,
+        isLoaded:false
+    })
+
+
+    useEffect(() => {
+        fetch('https://fakestoreapi.com/products')
+        .then(res=>res.json())
+            .then((json)=>{
                 setstate({
-                    data:imgs,
-                    loading:false
-                }, 3000);
-            })
-        
-        });
-    }, [category]);
+                    items: json.map((item)=>{
+                        return{
+                            id: item.id,
+                            title: item.title,
+                            images:item.image
+                        }
+                    }),
+                    isLoaded:true               
+                })
+            
+            }, (error) => {
+                setstate({
+                    error:error
+                })
+            }
+            )         
+
+    }, [])
 
 
 
     return state;
-
+    
 }

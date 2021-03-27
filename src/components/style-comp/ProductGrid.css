@@ -1,0 +1,13 @@
+.cards-grid{
+    width:100%;
+    text-align: center;
+    background-color:#ffff;
+    border-radius:5px;
+    overflow:hidden;
+    display:flex;
+    flex-wrap:wrap;
+}
+
+ul{
+   list-style-type: none;
+}

@@ -1,10 +1,6 @@
 .card-container{
-    width:15%;
-    text-align: center;
-    background-color:#ffff;
-    border-radius:5px;
+    border: 1px solid black;
 }
-
-ul{
-   list-style-type: none;
+.image{
+    width:150px;
 }

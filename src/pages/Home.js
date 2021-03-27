@@ -1,12 +1,12 @@
 import React from 'react';
-import ProductCard from '../components/ProductCard';
+import ProductGrid from '../components/ProductGrid';
 import "./pages-styles/Home.css";
 
 
 const Home = () => {
     return (
         <div className="home-container">
-            <ProductCard/> 
+            <ProductGrid/> 
         </div>
     )
 }
