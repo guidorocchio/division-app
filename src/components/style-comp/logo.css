@@ -1,0 +1,9 @@
+a{
+    text-decoration: none; 
+}
+a .logo {
+    font-family: misery-gymnast;    
+    color:black;
+    font-size:35px;
+    margin-left:auto;
+}
