@@ -5,7 +5,11 @@ import ProductCard from './ProductCard';
 
 
 const ProductGrid = () => {
-    const {items, error, isLoaded} = useFetchClothes();
+
+    // cantidad de articulos //How many products;;
+    let howMany = 10;
+
+    const {items, error, isLoaded} = useFetchClothes(howMany);
 
     if(!isLoaded){
         return (

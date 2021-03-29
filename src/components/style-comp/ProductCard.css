@@ -1,6 +1,15 @@
 .card-container{
-    border: 1px solid black;
-}
-.image{
+    border: 1px solid black; 
     width:150px;
+    height:300px;
+}
+
+.image-container{
+    margin:auto auto;
+    text-align:center;
+}
+
+.image{
+    margin:auto auto;
+    width:130px;
 }

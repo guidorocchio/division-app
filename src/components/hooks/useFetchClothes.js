@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 
-export const useFetchClothes= () =>{
+export const useFetchClothes= (howMany) =>{
+
     
     const [state, setstate] = useState({
         items:[],
@@ -10,7 +11,7 @@ export const useFetchClothes= () =>{
 
 
     useEffect(() => {
-        fetch('https://fakestoreapi.com/products')
+        (howMany? fetch(`https://fakestoreapi.com/products?limit=${howMany}`):fetch(`https://fakestoreapi.com/products`))
         .then(res=>res.json())
             .then((json)=>{
                 setstate({
