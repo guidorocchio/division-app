@@ -7,7 +7,7 @@ import ProductCard from './ProductCard';
 const ProductGrid = () => {
 
     // cantidad de articulos //How many products;;
-    let howMany = 10;
+    let howMany = 20;
 
     const {items, error, isLoaded} = useFetchClothes(howMany);
 
@@ -22,7 +22,7 @@ const ProductGrid = () => {
             <>
                <ul className="cards-grid">
                    {items.map((item)=>(
-                    <ProductCard name={item.title} img={item.images}/>
+                    <ProductCard name={item.title} img={item.images} price={item.price}/>
                      ))}
                 </ul>
             

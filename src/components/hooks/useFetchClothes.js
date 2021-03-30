@@ -19,7 +19,8 @@ export const useFetchClothes= (howMany) =>{
                         return{
                             id: item.id,
                             title: item.title,
-                            images:item.image
+                            images:item.image,
+                            price:item.price
                         }
                     }),
                     isLoaded:true               
