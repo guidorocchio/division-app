@@ -3,6 +3,8 @@ import "./style-comp/ProductCard.css";
 
 const ProductCard = ({name, img, price}) => {
 
+    
+
 
 
 

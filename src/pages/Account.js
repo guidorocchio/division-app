@@ -1,9 +1,15 @@
-import React from 'react'
+import React, {useState} from 'react';
+import "./pages-styles/Account.css";
+import LoginForm from "../components/LoginForm";
 
 const Account = () => {
+    
+    const [logOrSub, setLogOrSub]= useState("Log");
+
+
     return (
         <div className="account">
-            <h2>Account</h2>
+            <LoginForm/>          
         </div>
     )
 }

@@ -6,7 +6,7 @@ import "./pages-styles/Home.css";
 const Home = () => {
     return (
         <div className="home-container">
-            <ProductGrid/> 
+            <ProductGrid/>            
         </div>
     )
 }
